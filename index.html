@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirley Trinita S | Portfolio & Innovation Journey</title>
+  <meta name="description"
+    content="Portfolio of Shirley Trinita S — B.Com (PA) student, Finance & Innovation Aspirant, and Innovation Engineer Trainee in the PRICE ProtoSem programme.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: "#080611", violetx: "#8b5cf6", pinkx: "#ec4899" },
+          boxShadow: { glow: "0 0 60px rgba(139,92,246,.25)" }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: #080611;
+      background-image:
+        radial-gradient(circle at 8% 8%, rgba(139, 92, 246, .22), transparent 28%),
+        radial-gradient(circle at 92% 18%, rgba(236, 72, 153, .12), transparent 24%),
+        radial-gradient(circle at 50% 80%, rgba(59, 130, 246, .10), transparent 30%);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, .055);
+      border: 1px solid rgba(255, 255, 255, .11);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px)
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #c084fc, #f0abfc, #818cf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent
+    }
+
+    .gridbg {
+      background-image: linear-gradient(rgba(255, 255, 255, .028) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .028) 1px, transparent 1px);
+      background-size: 44px 44px
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s ease, transform .7s ease
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none
+    }
+
+    .float {
+      animation: float 5s ease-in-out infinite
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .orb {
+      animation: orb 8s ease-in-out infinite
+    }
+
+    @keyframes orb {
+
+      0%,
+      100% {
+        transform: translate(0, 0)
+      }
+
+      50% {
+        transform: translate(18px, -14px)
+      }
+    }
+
+    .navlink {
+      position: relative
+    }
+
+    .navlink:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 2px;
+      background: #c084fc;
+      transition: .25s
+    }
+
+    .navlink:hover:after {
+      width: 100%
+    }
+
+    .phase {
+      transition: .3s
+    }
+
+    .phase:hover {
+      transform: translateY(-6px);
+      background: rgba(255, 255, 255, .09)
+    }
+
+    .bar {
+      transition: width 1.2s ease
+    }
+  </style>
+</head>
+
+<body class="text-white antialiased">
+  <div class="pointer-events-none fixed inset-0 overflow-hidden">
+    <div class="orb absolute -left-20 top-40 h-56 w-56 rounded-full bg-violet-600/10 blur-3xl"></div>
+    <div class="orb absolute -right-20 top-[55%] h-64 w-64 rounded-full bg-pink-500/10 blur-3xl"></div>
+  </div>
+
+  <header class="fixed top-0 z-50 w-full px-4">
+    <nav class="mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl glass px-5 py-3">
+      <a href="#home" class="text-lg font-black tracking-wide">Shirley<span class="text-violet-400">.</span></a>
+      <div class="hidden items-center gap-7 text-sm text-white/70 md:flex">
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#skills">Skills</a>
+        <a class="navlink" href="#protosem">ProtoSem</a>
+        <a class="navlink" href="#journey">Journey</a>
+        <a class="navlink" href="#contact">Contact</a>
+      </div>
+      <div class="flex gap-2">
+        <a href="resume.html"
+          class="rounded-xl bg-violet-600 px-4 py-2 text-sm font-bold hover:bg-violet-500">Resume</a>
+        <button id="menuBtn" class="rounded-xl glass px-3 py-2 md:hidden">☰</button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="mx-auto mt-2 hidden max-w-6xl rounded-2xl glass p-3 md:hidden">
+      <div class="grid gap-1 text-sm text-white/75">
+        <a class="rounded-xl p-3 hover:bg-white/10" href="#about">About</a>
+        <a class="rounded-xl p-3 hover:bg-white/10" href="#skills">Skills</a>
+        <a class="rounded-xl p-3 hover:bg-white/10" href="#protosem">ProtoSem</a>
+        <a class="rounded-xl p-3 hover:bg-white/10" href="#journey">Journey</a>
+        <a class="rounded-xl p-3 hover:bg-white/10" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="gridbg mx-auto max-w-6xl px-5 pt-32">
+    <!-- HERO -->
+    <section class="grid min-h-[82vh] items-center gap-12 py-12 md:grid-cols-[1.15fr_.85fr]">
+      <div class="reveal">
+        <div class="mb-5 inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs font-bold text-violet-200">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-violet-400"></span>
+          B.Com (PA) Student • Innovation Engineer Trainee
+        </div>
+        <h1 class="max-w-3xl text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">
+          Finance meets
+          <span class="gradient">innovation.</span>
+        </h1>
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-white/65">
+          A commerce student building a strong foundation in finance, accounting and practical business systems,
+          while exploring real-world commerce challenges through the PRICE ProtoSem innovation programme.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#protosem"
+            class="rounded-2xl bg-violet-600 px-6 py-3.5 font-bold shadow-glow hover:-translate-y-1 hover:bg-violet-500">Explore
+            ProtoSem →</a>
+          <a href="resume.html" class="rounded-2xl glass px-6 py-3.5 font-bold hover:bg-white/10">View ATS Resume</a>
+        </div>
+        <div class="mt-10 grid max-w-xl grid-cols-3 gap-3">
+          <div class="glass rounded-2xl p-4">
+            <p class="text-xl font-black">20</p>
+            <p class="mt-1 text-xs text-white/45">Week Programme</p>
+          </div>
+          <div class="glass rounded-2xl p-4">
+            <p class="text-xl font-black">4</p>
+            <p class="mt-1 text-xs text-white/45">Phases</p>
+          </div>
+          <div class="glass rounded-2xl p-4">
+            <p class="text-xl font-black">5+</p>
+            <p class="mt-1 text-xs text-white/45">Focus Areas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal flex justify-center md:justify-end">
+        <div class="float w-full max-w-sm">
+          <div class="relative rounded-[2rem] p-[1px] shadow-glow">
+            <div
+              class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-violet-400/50 via-pink-400/10 to-indigo-400/40 blur-sm">
+            </div>
+            <div class="glass relative rounded-[2rem] p-7">
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-violet-400/10 px-3 py-1 text-[10px] font-bold tracking-widest text-violet-200">PROFILE</span>
+                <span class="text-xs text-white/35">2026</span>
+              </div>
+              <div class="mt-7 flex justify-center">
+                <div class="rounded-[1.8rem] bg-gradient-to-br from-violet-500/20 to-indigo-500/20 p-2">
+                  <img src="https://ui-avatars.com/api/?name=Shirley+Trinita+S&background=7c3aed&color=fff&size=256"
+                    alt="Shirley Trinita S" class="h-36 w-36 rounded-[1.4rem] border border-white/15">
+                </div>
+              </div>
+              <div class="mt-6 text-center">
+                <h2 class="text-2xl font-black">Shirley Trinita S</h2>
+                <p class="mt-1 text-violet-300">Finance & Innovation Aspirant</p>
+              </div>
+              <div class="mt-7 grid grid-cols-2 gap-3 text-left text-sm">
+                <div class="rounded-2xl bg-white/5 p-4"><span class="text-white/40">Programme</span>
+                  <p class="mt-1 font-bold">PRICE ProtoSem</p>
+                </div>
+                <div class="rounded-2xl bg-white/5 p-4"><span class="text-white/40">Course</span>
+                  <p class="mt-1 font-bold">B.Com (PA)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal py-24">
+      <div class="grid gap-6 md:grid-cols-[.75fr_1.25fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[.22em] text-violet-300">01 · About Me</p>
+          <h2 class="mt-3 text-4xl font-black">Learning with a <span class="gradient">finance-first</span> & innovation
+            mindset.</h2>
+        </div>
+        <div class="glass rounded-3xl p-8">
+          <p class="leading-8 text-white/65">
+            I am pursuing B.Com (PA) at Kumaraguru College of Arts and Science. I am particularly interested in
+            finance and accounting and enjoy developing practical skills that can support a career in the finance field.
+            Alongside accounting tools like Tally, I am actively broadening my horizon through hands-on industry
+            programmes focused on business problem solving.
+          </p>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <span class="rounded-full bg-violet-400/10 px-4 py-2 text-sm text-violet-200">Finance</span>
+            <span class="rounded-full bg-violet-400/10 px-4 py-2 text-sm text-violet-200">Accounting</span>
+            <span class="rounded-full bg-violet-400/10 px-4 py-2 text-sm text-violet-200">Business Systems</span>
+            <span class="rounded-full bg-violet-400/10 px-4 py-2 text-sm text-violet-200">Innovation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal py-24">
+      <p class="text-sm font-bold uppercase tracking-[.22em] text-violet-300">02 · Skills & Qualifications</p>
+      <h2 class="mt-3 text-4xl font-black">What I'm building</h2>
+      <div class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="phase glass rounded-3xl p-6">
+          <div class="text-3xl">📊</div>
+          <h3 class="mt-5 text-lg font-bold">Finance Interest</h3>
+          <p class="mt-2 text-sm leading-6 text-white/55">Strong interest in finance and financial career opportunities.
+          </p>
+        </div>
+        <div class="phase glass rounded-3xl p-6">
+          <div class="text-3xl">🧾</div>
+          <h3 class="mt-5 text-lg font-bold">Accounting</h3>
+          <p class="mt-2 text-sm leading-6 text-white/55">Academic foundation through B.Com (PA).</p>
+        </div>
+        <div class="phase glass rounded-3xl p-6">
+          <div class="text-3xl">💻</div>
+          <h3 class="mt-5 text-lg font-bold">Tally</h3>
+          <p class="mt-2 text-sm leading-6 text-white/55">Completed Tally course certification.</p>
+        </div>
+        <div class="phase glass rounded-3xl p-6">
+          <div class="text-3xl">🚀</div>
+          <h3 class="mt-5 text-lg font-bold">Innovation</h3>
+          <p class="mt-2 text-sm leading-6 text-white/55">Exploring real-world commerce challenges through ProtoSem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTOSEM -->
+    <section id="protosem" class="reveal py-24">
+      <div
+        class="relative overflow-hidden rounded-[2rem] border border-violet-400/20 bg-gradient-to-br from-violet-500/12 via-white/[.035] to-indigo-500/10 p-7 shadow-glow md:p-10">
+        <div class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-violet-500/15 blur-3xl"></div>
+        <div class="relative">
+          <div class="flex flex-wrap items-center gap-3">
+            <span
+              class="rounded-full bg-violet-400/10 px-4 py-2 text-xs font-bold tracking-widest text-violet-200">PROTOSEM</span>
+            <span class="rounded-full bg-white/5 px-4 py-2 text-xs font-semibold text-white/50">20-WEEK
+              INDUSTRY-INTEGRATED PROGRAMME</span>
+          </div>
+          <div class="mt-5 grid gap-8 lg:grid-cols-[1.1fr_.9fr]">
+            <div>
+              <h2 class="text-4xl font-black md:text-5xl">PRICE <span class="gradient">ProtoSem</span></h2>
+              <p class="mt-3 text-lg font-semibold text-violet-200">Role: Innovation Engineer Trainee</p>
+              <p class="mt-5 max-w-2xl leading-8 text-white/60">
+                Selected for a 20-week industry-integrated innovation programme focused on solving real-world
+                retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping,
+                and entrepreneurship.
+              </p>
+            </div>
+            <div class="glass rounded-3xl p-6">
+              <p class="text-xs font-bold uppercase tracking-widest text-white/40">Programme focus</p>
+              <div class="mt-5 space-y-4">
+                <div>
+                  <div class="flex justify-between text-xs"><span>Retail & Commerce Innovation</span><span>01</span>
+                  </div>
+                  <div class="mt-2 h-1.5 rounded-full bg-white/10">
+                    <div class="bar h-full w-[92%] rounded-full bg-violet-400"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs"><span>AI & Analytics</span><span>02</span></div>
+                  <div class="mt-2 h-1.5 rounded-full bg-white/10">
+                    <div class="bar h-full w-[82%] rounded-full bg-fuchsia-400"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs"><span>Intelligent Systems & IoT</span><span>03</span></div>
+                  <div class="mt-2 h-1.5 rounded-full bg-white/10">
+                    <div class="bar h-full w-[72%] rounded-full bg-indigo-400"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs"><span>Prototyping</span><span>04</span></div>
+                  <div class="mt-2 h-1.5 rounded-full bg-white/10">
+                    <div class="bar h-full w-[68%] rounded-full bg-purple-300"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <div class="phase glass rounded-2xl p-5"><span class="text-2xl">🛍️</span>
+              <h3 class="mt-3 font-bold">Phygital Retail</h3>
+            </div>
+            <div class="phase glass rounded-2xl p-5"><span class="text-2xl">🤖</span>
+              <h3 class="mt-3 font-bold">AI & Analytics</h3>
+            </div>
+            <div class="phase glass rounded-2xl p-5"><span class="text-2xl">📡</span>
+              <h3 class="mt-3 font-bold">IoT</h3>
+            </div>
+            <div class="phase glass rounded-2xl p-5"><span class="text-2xl">🧪</span>
+              <h3 class="mt-3 font-bold">Prototyping</h3>
+            </div>
+            <div class="phase glass rounded-2xl p-5"><span class="text-2xl">💡</span>
+              <h3 class="mt-3 font-bold">Entrepreneurship</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="journey" class="reveal py-24">
+      <p class="text-sm font-bold uppercase tracking-[.22em] text-violet-300">03 · Programme Journey</p>
+      <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <h2 class="mt-3 text-4xl font-black">One programme. <span class="gradient">Four phases.</span></h2>
+        <p class="max-w-md text-sm leading-6 text-white/45">Weeks 00–20, moving from exploration to practical
+          innovation.</p>
+      </div>
+      <div class="relative mt-12">
+        <div
+          class="absolute left-6 right-6 top-10 hidden h-px bg-gradient-to-r from-violet-500/20 via-violet-400 to-indigo-500/20 lg:block">
+        </div>
+        <div class="grid gap-5 lg:grid-cols-4">
+          <div class="phase glass relative rounded-3xl p-6">
+            <div class="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-violet-600 font-black">
+              01</div>
+            <p class="mt-6 text-xs font-bold uppercase tracking-widest text-violet-300">Weeks 00–05</p>
+            <h3 class="mt-2 text-xl font-black">Explore</h3>
+            <p class="mt-2 text-sm leading-6 text-white/50">Understand real-world context, problems and opportunities.
+            </p>
+          </div>
+          <div class="phase glass relative rounded-3xl p-6">
+            <div
+              class="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-fuchsia-600 font-black">02
+            </div>
+            <p class="mt-6 text-xs font-bold uppercase tracking-widest text-fuchsia-300">Weeks 06–10</p>
+            <h3 class="mt-2 text-xl font-black">Discover</h3>
+            <p class="mt-2 text-sm leading-6 text-white/50">Investigate problem statements and identify possible
+              directions.</p>
+          </div>
+          <div class="phase glass relative rounded-3xl p-6">
+            <div class="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 font-black">
+              03</div>
+            <p class="mt-6 text-xs font-bold uppercase tracking-widest text-indigo-300">Weeks 11–15</p>
+            <h3 class="mt-2 text-xl font-black">Develop</h3>
+            <p class="mt-2 text-sm leading-6 text-white/50">Move ideas toward prototypes and practical solutions.</p>
+          </div>
+          <div class="phase glass relative rounded-3xl p-6">
+            <div class="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-purple-600 font-black">
+              04</div>
+            <p class="mt-6 text-xs font-bold uppercase tracking-widest text-purple-300">Weeks 16–20</p>
+            <h3 class="mt-2 text-xl font-black">Validate</h3>
+            <p class="mt-2 text-sm leading-6 text-white/50">Refine, test and communicate practical innovation outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHIVE -->
+    <section class="reveal py-24">
+      <div class="glass rounded-[2rem] p-7 md:p-10">
+        <div class="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[.22em] text-violet-300">04 · Programme Archive & Field Notes
+            </p>
+            <h2 class="mt-3 text-4xl font-black">Twenty-One chapters. <span class="gradient">One continuous
+                journey.</span></h2>
+          </div>
+          <span class="rounded-full bg-white/5 px-4 py-2 text-xs text-white/45">Weeks 00–20</span>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-2">
+          <button class="filter rounded-xl bg-violet-600 px-4 py-2 text-xs font-bold" data-filter="all">ALL
+            (00–20)</button>
+          <button class="filter rounded-xl glass px-4 py-2 text-xs font-bold" data-filter="p1">PHASE 01 (00–05)</button>
+          <button class="filter rounded-xl glass px-4 py-2 text-xs font-bold" data-filter="p2">PHASE 02 (06–10)</button>
+          <button class="filter rounded-xl glass px-4 py-2 text-xs font-bold" data-filter="p3">PHASE 03 (11–15)</button>
+          <button class="filter rounded-xl glass px-4 py-2 text-xs font-bold" data-filter="p4">PHASE 04 (16–20)</button>
+        </div>
+
+        <div id="archive" class="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/MyPortfolio/protosem/week-00" data-phase="p1"
+            class="archive-card glass rounded-2xl p-5 hover:bg-white/10">
+            <p class="text-xs font-bold text-violet-300">WEEK 00</p>
+            <h3 class="mt-2 font-bold">Real-World Insights from the Chennai Retail Summit</h3>
+            <p class="mt-2 text-sm text-white/45">Industry exposure & retail insights</p>
+          </a>
+          <div data-phase="p1" class="archive-card glass rounded-2xl p-5">
+            <p class="text-xs font-bold text-violet-300">WEEKS 01–05</p>
+            <h3 class="mt-2 font-bold">Phase 01 Archive</h3>
+            <p class="mt-2 text-sm text-white/45">Programme milestones and field notes.</p>
+          </div>
+          <div data-phase="p2" class="archive-card glass rounded-2xl p-5">
+            <p class="text-xs font-bold text-fuchsia-300">WEEKS 06–10</p>
+            <h3 class="mt-2 font-bold">Phase 02 Archive</h3>
+            <p class="mt-2 text-sm text-white/45">Problem exploration and discovery.</p>
+          </div>
+          <div data-phase="p3" class="archive-card glass rounded-2xl p-5">
+            <p class="text-xs font-bold text-indigo-300">WEEKS 11–15</p>
+            <h3 class="mt-2 font-bold">Phase 03 Archive</h3>
+            <p class="mt-2 text-sm text-white/45">Development and prototyping.</p>
+          </div>
+          <div data-phase="p4" class="archive-card glass rounded-2xl p-5">
+            <p class="text-xs font-bold text-purple-300">WEEKS 16–20</p>
+            <h3 class="mt-2 font-bold">Phase 04 Archive</h3>
+            <p class="mt-2 text-sm text-white/45">Validation and final innovation outcomes.</p>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-white/30">Weekly reflections and documentation are published periodically.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal py-24">
+      <div
+        class="relative overflow-hidden rounded-[2rem] border border-violet-400/20 bg-gradient-to-br from-violet-500/15 via-white/[.04] to-indigo-500/10 p-8 text-center shadow-glow md:p-14">
+        <h2 class="relative text-4xl font-black">Interested in finance, <span class="gradient">innovation &
+            growth.</span></h2>
+        <p class="relative mx-auto mt-4 max-w-2xl leading-7 text-white/55">Feel free to connect with me for academic,
+          learning and professional opportunities.</p>
+        <div class="relative mt-8 flex flex-wrap justify-center gap-4">
+          <a class="rounded-xl bg-violet-600 px-6 py-3 font-bold hover:bg-violet-500"
+            href="mailto:shirleytrinita008@gmail.com">✉ Email Me</a>
+          <a class="rounded-xl glass px-6 py-3 font-bold hover:bg-white/10"
+            href="https://www.linkedin.com/in/shirley-trinita-s-98aa30373/" target="_blank" rel="noopener">in
+            LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer
+    class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-10 text-center text-sm text-white/35 sm:flex-row sm:justify-between">
+    <span>© 2026 Shirley Trinita S. All rights reserved.</span>
+    <span>Finance • Innovation • Growth</span>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+    }, { threshold: .1 });
+    document.querySelectorAll('.reveal').forEach(e => observer.observe(e));
+
+    const menuBtn = document.getElementById('menuBtn'), menu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    const filters = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.archive-card');
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(x => { x.classList.remove('bg-violet-600'); x.classList.add('glass') });
+        btn.classList.add('bg-violet-600'); btn.classList.remove('glass');
+        const f = btn.dataset.filter;
+        cards.forEach(card => card.classList.toggle('hidden', f !== 'all' && card.dataset.phase !== f));
+      });
+    });
+  </script>
+</body>
+
+</html>
