@@ -435,12 +435,41 @@
         </div>
 
         <div id="archive" class="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <a href="/MyPortfolio/protosem/week-00" data-phase="p1"
-            class="archive-card glass rounded-2xl p-5 hover:bg-white/10">
-            <p class="text-xs font-bold text-violet-300">WEEK 00</p>
-            <h3 class="mt-2 font-bold">Real-World Insights from the Chennai Retail Summit</h3>
-            <p class="mt-2 text-sm text-white/45">Industry exposure & retail insights</p>
-          </a>
+          <div data-phase="p1" class="archive-card glass rounded-2xl p-5 col-span-full week00-card">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold text-violet-300">WEEK 00</p>
+                <h3 class="mt-2 font-bold text-lg">Real-World Insights from the Chennai Retail Summit</h3>
+                <p class="mt-1 text-sm text-white/45">Industry exposure &amp; retail insights</p>
+              </div>
+              <button id="week00Toggle"
+                class="mt-1 flex-shrink-0 rounded-xl bg-violet-600/30 border border-violet-400/30 px-4 py-2 text-xs font-bold text-violet-200 hover:bg-violet-600/60 transition-all"
+                aria-expanded="false">Read More ↓</button>
+            </div>
+            <div id="week00Content" class="week00-content hidden mt-6">
+              <p class="leading-8 text-white/70 text-sm">
+                Attending the Chennai Retail Summit was an enriching and insightful experience. I had the opportunity
+                to meet and interact with several business professionals and industry experts, which helped me gain a
+                better understanding of business structures, retail operations, and how businesses work in the real
+                world. The event also gave me the chance to build meaningful connections with people from different
+                backgrounds and learn from their experiences and perspectives. Overall, it was a great platform for
+                learning, networking, and gaining practical exposure, and I'm grateful for the valuable insights and
+                connections I gained from this experience.
+              </p>
+              <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="overflow-hidden rounded-2xl border border-white/10">
+                  <img src="images/chennai_retail_summit_1.jpg" alt="Chennai Retail Summit – Photo 1"
+                    class="w-full h-52 object-cover hover:scale-105 transition-transform duration-500">
+                  <p class="p-2 text-center text-xs text-white/35">Chennai Retail Summit</p>
+                </div>
+                <div class="overflow-hidden rounded-2xl border border-white/10">
+                  <img src="images/chennai_retail_summit_2.jpg" alt="Chennai Retail Summit – Photo 2"
+                    class="w-full h-52 object-cover hover:scale-105 transition-transform duration-500">
+                  <p class="p-2 text-center text-xs text-white/35">Chennai Retail Summit</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div data-phase="p1" class="archive-card glass rounded-2xl p-5">
             <p class="text-xs font-bold text-violet-300">WEEKS 01–05</p>
             <h3 class="mt-2 font-bold">Phase 01 Archive</h3>
@@ -511,6 +540,17 @@
         cards.forEach(card => card.classList.toggle('hidden', f !== 'all' && card.dataset.phase !== f));
       });
     });
+
+    const week00Btn = document.getElementById('week00Toggle');
+    const week00Content = document.getElementById('week00Content');
+    if (week00Btn && week00Content) {
+      week00Btn.addEventListener('click', () => {
+        const isOpen = !week00Content.classList.contains('hidden');
+        week00Content.classList.toggle('hidden', isOpen);
+        week00Btn.textContent = isOpen ? 'Read More ↓' : 'Collapse ↑';
+        week00Btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
   </script>
 </body>
 
